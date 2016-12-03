@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11851,14 +11851,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
 <span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
@@ -14614,7 +14614,7 @@ A maximum depth of 4 best generalizes to unseen data since that is where the val
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-The grid search technique allows us to fit different parameter combinations for a model. It can be applied to optimize a learning algorithm by selecting the model with the least error.</p>
+The grid search technique allows us to fit different parameter combinations for a model. It does so exhaustively, meaning that it tries every combination until it finds the best one. It can be applied to optimize a learning algorithm by selecting the model with the least error.</p>
 
 </div>
 </div>
@@ -14636,7 +14636,7 @@ The grid search technique allows us to fit different parameter combinations for 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-k-fold CV breaks up our dataset of n elements into k groups (or "folds") of size n/k. We then take one fold as our testing set and the rest as our training set and fit the model using the latter to see how well it predicts the former. We do this for each of the k folds and take the average of the mean squared errors. This is important for grid search when optimizing a model because one set of parameters in the grid may produce the lowest average MSE (optimal) but another set of parameters that are slightly different can sometimes have lower MSE for a single pair of training and testing sets.</p>
+k-fold CV breaks up our dataset of n elements into k groups (or "folds") of size n/k. We then take one fold as our testing set and the rest as our training set and fit the model using the latter to see how well it predicts the former. We do this for each of the k folds and take the average of the errors. This is important for grid search when optimizing a model because one set of parameters in the grid may produce the lowest average error (optimal) but another set of parameters that are slightly different can sometimes have lower error for a single pair of training and testing sets.</p>
 
 </div>
 </div>
