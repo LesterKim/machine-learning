@@ -14614,7 +14614,7 @@ A maximum depth of 4 best generalizes to unseen data since that is where the val
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-The grid search technique allows us to fit different parameter combinations for a model. It does so exhaustively, meaning that it tries every combination until it finds the best one. It can be applied to optimize a learning algorithm by selecting the model with the least error.</p>
+The grid search technique allows us to fit different parameter combinations for a model. For example, using SVM as our model, we can have parameters = {'kernel':('linear', 'rbf'), 'C':[1, 10]}. Grid search tries every combination of kernal and C - four in this case (2 kernel values *2 C values) - until it finds the best one. It can be applied to optimize a learning algorithm by selecting the model with the least error.</p>
 
 </div>
 </div>
